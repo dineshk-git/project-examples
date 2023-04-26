@@ -6,12 +6,12 @@ steps:
 - task: ArtifactoryNpm@2
   inputs:
     command: 'install'
-    artifactoryService: 'dineshk'
+    jfrogArtifactoryService: 'dineshk'
     sourceRepo: 'dinesh-npm-remote'
 - task: ArtifactoryNpm@2
   inputs:
     command: 'ci'
-    artifactoryService: 'dineshk'
+    jfrogArtifactoryService: 'dineshk'
     sourceRepo: 'dinesh-npm-remote'
     workingFolder: 'npm-example/package.json'
     collectBuildInfo: true
