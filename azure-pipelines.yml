@@ -4,18 +4,39 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 trigger:
-- master
-
-pool:
-  vmImage: ubuntu-latest
-
-steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
-
-- script: |
-    npm install
-    npm run build
-  displayName: 'npm install and build'
+  branches:
+    include:
+    - none
+stages:
+- stage: __default
+  jobs:
+  - job: Job
+    pool:
+      name: Default
+    steps:
+    - task: JFrogNpm@1
+      inputs:
+        command: 'ci'
+        artifactoryConnection: 'Artifactory'
+        sourceRepo: 'npm'
+        arguments: ''
+        collectBuildInfo: true
+        threads: '1'
+        buildName: '$(Build.DefinitionName)'
+        buildNumber: '$(Build.BuildNumber)'
+        projectKey: 'alg'
+        includeEnvVars: true
+    - task: JFrogPublishBuildInfo@1
+      inputs:
+        artifactoryConnection: 'Artifactory'
+        buildName: '$(Build.DefinitionName)'
+        buildNumber: '$(Build.BuildNumber)'
+        projectKey: 'alg'
+    - task: JFrogBuildScan@1
+      inputs:
+        xrayConnection: 'Xray'
+        buildName: '$(Build.DefinitionName)'
+        buildNumber: '$(Build.BuildNumber)'
+        projectKey: 'alg'
+        allowFailBuild: true
+        vuln: false
