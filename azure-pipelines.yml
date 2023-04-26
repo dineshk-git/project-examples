@@ -3,4 +3,3 @@
     command: 'install'
     artifactoryService: 'dineshk'
     sourceRepo: 'dinesh-npm-remote'
-    workingFolder: 'https://github.com/dineshk-git/project-examples/blob/master/npm-example/package.json'
