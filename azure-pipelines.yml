@@ -6,7 +6,7 @@ steps:
     command: 'install'
     artifactoryConnection: 'dineshk'
     sourceRepo: 'dinesh-npm-remote'
-    workingFolder: 'npm-example/package.json'
+    workingFolder: 'npm-example/'
     collectBuildInfo: true
     threads: '1'
     buildName: '$(Build.DefinitionName)'
