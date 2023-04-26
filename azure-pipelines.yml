@@ -6,12 +6,13 @@ steps:
     command: 'install'
     artifactoryConnection: 'dineshk'
     sourceRepo: 'dinesh-npm-remote'
+    workingFolder: 'npm-example/package.json'
     collectBuildInfo: true
     threads: '1'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
 - task: JFrogPublishBuildInfo@1
   inputs:
-    artifactoryConnection: 'dinesh'
+    artifactoryConnection: 'dineshk'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
