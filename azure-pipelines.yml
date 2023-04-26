@@ -7,6 +7,7 @@ steps:
     artifactoryConnection: 'dineshk'
     sourceRepo: 'dinesh-npm-remote'
     workingFolder: 'npm-example/'
+    arguments: '--loglevel verbose'
     collectBuildInfo: true
     threads: '1'
     buildName: '$(Build.DefinitionName)'
