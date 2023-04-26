@@ -1,22 +1,16 @@
 {
-  “name”: “testnpmbuilds”,
-  “version”: “1.0.0-ot”,
-  “description”: “Testing npm builds”,
-  “main”: “index.js”,
-  “scripts”: {
-    “no-publish”: “npm config list”,
-    “publish-this”: “npm publish “,
-    “publish-deep”: “npm run no-publish -- --json  & npm run inbetween”,
-    “inbetween”: “npm run publish-this”,
-    “no-publish-deep”: “npm run no-publish -- --json”
+  "name": "npm-example",
+  "version": "0.0.3",
+  "scripts": {
+    "start": "node helloworld"
   },
-  “repository”: {
-    “type”: “git”,
-    “url”: “https://DSWZorgverzekeraar-test@dev.azure.com/DSWZorgverzekeraar-test/Algemeen.Testboard/_git/TestNpmBuilds”
+  "dependencies": {
+    "send": "^0.16.2"
   },
-  “author”: “”,
-  “license”: “ISC”,
-  “dependencies”: {
+   “dependencies”: {
     “json-schema”: “0.2.3"
+  }
+  "devDependencies": {
+    "debug": "^4.1.1"
   }
 }
