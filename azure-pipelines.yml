@@ -1,16 +1,17 @@
 trigger:
-- master
+ - master
 steps:
-- task: CmdLine@2
+- task: JFrogNpm@1
   inputs:
-    script: 'ls -lart $(System.DefaultWorkingDirectory)'
-- task: ArtifactoryNpm@2
-  inputs:
-    command: 'ci'
-    jfrogArtifactoryService: 'dineshk'
+    command: 'install'
+    artifactoryConnection: 'dineshk'
     sourceRepo: 'dinesh-npm-remote'
-    workingFolder: '$(System.DefaultWorkingDirectory)/npm-example'
     collectBuildInfo: true
     threads: '1'
+    buildName: '$(Build.DefinitionName)'
+    buildNumber: '$(Build.BuildNumber)'
+- task: JFrogPublishBuildInfo@1
+  inputs:
+    artifactoryConnection: 'dinesh'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
