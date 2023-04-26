@@ -1,7 +1,5 @@
 trigger:
 - master
-pool:
-  vmImage: 'Ubuntu-18.04'
 steps:
 - task: ArtifactoryNpm@2
   inputs:
