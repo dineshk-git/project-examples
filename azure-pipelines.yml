@@ -6,7 +6,7 @@ steps:
     command: 'ci'
     jfrogArtifactoryService: 'dineshk'
     sourceRepo: 'dinesh-npm-remote'
-    workingFolder: 'npm-example/package.json'
+    workingFolder: '$(System.DefaultWorkingDirectory)/npm-example/package.json'
     collectBuildInfo: true
     threads: '1'
     buildName: '$(Build.DefinitionName)'
