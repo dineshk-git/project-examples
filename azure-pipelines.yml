@@ -3,11 +3,6 @@ trigger:
 steps:
 - task: ArtifactoryNpm@2
   inputs:
-    command: 'install'
-    jfrogArtifactoryService: 'dineshk'
-    sourceRepo: 'dinesh-npm-remote'
-- task: ArtifactoryNpm@2
-  inputs:
     command: 'ci'
     jfrogArtifactoryService: 'dineshk'
     sourceRepo: 'dinesh-npm-remote'
