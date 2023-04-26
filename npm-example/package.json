@@ -7,9 +7,6 @@
   "dependencies": {
     "send": "^0.16.2"
   },
-   "dependencies": {
-    "json-schema": "0.2.3"
-  }
   "devDependencies": {
     "debug": "^4.1.1"
   }
