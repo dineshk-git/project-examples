@@ -1,22 +1,6 @@
-    pool:
-      name: Default
-    steps:
-    - task: JFrogNpm@1
-      inputs:
-        command: 'ci'
-        artifactoryConnection: 'dineshk'
-        sourceRepo: 'mk-npm'
-        arguments: ''
-        collectBuildInfo: true
-        threads: '1'
-        buildName: '$(Build.DefinitionName)'
-        buildNumber: '$(Build.BuildNumber)'
-        projectKey: 'dinesh'
-        includeEnvVars: true
-    - task: JFrogPublishBuildInfo@1
-      inputs:
-        artifactoryConnection: 'dineshk'
-        buildName: '$(Build.DefinitionName)'
-        buildNumber: '$(Build.BuildNumber)'
-        projectKey: 'dinesh'
-    
+- task: ArtifactoryNpm@2
+  inputs:
+    command: 'install'
+    artifactoryService: 'dineshk'
+    sourceRepo: 'dinesh-npm-remote'
+    workingFolder: 'https://github.com/dineshk-git/project-examples/blob/master/npm-example/package.json'
