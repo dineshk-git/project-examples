@@ -17,3 +17,8 @@ steps:
     artifactoryConnection: 'dineshk'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
+- task: JFrogBuildScan@1
+  inputs:
+        xrayConnection: 'dineshk-xray'
+        buildName: '$(Build.DefinitionName)'
+        buildNumber: '$(Build.BuildNumber)'
