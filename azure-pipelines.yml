@@ -1,42 +1,22 @@
-# Node.js
-# Build a general Node.js project with npm.
-# Add steps that analyze code, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
-
-trigger:
-  branches:
-    include:
-    - none
-stages:
-- stage: __default
-  jobs:
-  - job: Job
     pool:
       name: Default
     steps:
     - task: JFrogNpm@1
       inputs:
         command: 'ci'
-        artifactoryConnection: 'Artifactory'
-        sourceRepo: 'npm'
+        artifactoryConnection: 'dineshk'
+        sourceRepo: 'mk-npm'
         arguments: ''
         collectBuildInfo: true
         threads: '1'
         buildName: '$(Build.DefinitionName)'
         buildNumber: '$(Build.BuildNumber)'
-        projectKey: 'alg'
+        projectKey: 'dinesh'
         includeEnvVars: true
     - task: JFrogPublishBuildInfo@1
       inputs:
-        artifactoryConnection: 'Artifactory'
+        artifactoryConnection: 'dineshk'
         buildName: '$(Build.DefinitionName)'
         buildNumber: '$(Build.BuildNumber)'
-        projectKey: 'alg'
-    - task: JFrogBuildScan@1
-      inputs:
-        xrayConnection: 'Xray'
-        buildName: '$(Build.DefinitionName)'
-        buildNumber: '$(Build.BuildNumber)'
-        projectKey: 'alg'
-        allowFailBuild: true
-        vuln: false
+        projectKey: 'dinesh'
+    
