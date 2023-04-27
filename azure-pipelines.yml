@@ -22,3 +22,4 @@ steps:
         xrayConnection: 'dineshhts2x'
         buildName: '$(Build.DefinitionName)'
         buildNumber: '$(Build.BuildNumber)'
+        allowFailBuild: true
