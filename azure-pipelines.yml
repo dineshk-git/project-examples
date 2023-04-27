@@ -14,11 +14,11 @@ steps:
     buildNumber: '$(Build.BuildNumber)'
 - task: JFrogPublishBuildInfo@1
   inputs:
-    artifactoryConnection: 'dineshhts2x'
+    artifactoryConnection: 'dineshhts2'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
 - task: JFrogBuildScan@1
   inputs:
-        xrayConnection: 'dineshk-xray'
+        xrayConnection: 'dineshhts2x'
         buildName: '$(Build.DefinitionName)'
         buildNumber: '$(Build.BuildNumber)'
