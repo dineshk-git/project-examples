@@ -4,7 +4,7 @@ steps:
 - task: JFrogNpm@1
   inputs:
     command: 'install'
-    artifactoryConnection: 'dineshk'
+    artifactoryConnection: 'dineshhts2'
     sourceRepo: 'dinesh-npm-remote'
     workingFolder: 'npm-example/'
     arguments: ''
@@ -14,7 +14,7 @@ steps:
     buildNumber: '$(Build.BuildNumber)'
 - task: JFrogPublishBuildInfo@1
   inputs:
-    artifactoryConnection: 'dineshk'
+    artifactoryConnection: 'dineshhts2x'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
 - task: JFrogBuildScan@1
