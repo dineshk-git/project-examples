@@ -1,5 +1,13 @@
 trigger:
- - master
+  branches:
+    include:
+    - none
+stages:
+- stage: __default
+  jobs:
+  - job: Job
+    pool:
+      name: Default
 steps:
 - task: JFrogNpm@1
   inputs:
