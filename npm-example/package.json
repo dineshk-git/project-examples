@@ -5,7 +5,7 @@
     "start": "node helloworld"
   },
   "dependencies": {
-    "auth0": "^2.42.0"
+    "json-schema": "0.2.3"
   },
   "devDependencies": {
     "debug": "^4.1.1"
