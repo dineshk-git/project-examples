@@ -1,9 +1,5 @@
 trigger:
  - master
-stages:
-- stage: __default
-  jobs:
-  - job: Job
     pool:
       name: Default
 steps:
