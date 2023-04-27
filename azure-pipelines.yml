@@ -1,7 +1,5 @@
 trigger:
-  branches:
-    include:
-    - none
+ - master
 stages:
 - stage: __default
   jobs:
