@@ -1,13 +1,18 @@
 {
-  "name": "npm-example",
-  "version": "0.0.3",
+  "name": "testnpmbuilds",
+  "version": "1.0.0-ot",
+  "description”: “Testing npm builds",
+  "main": "index.js",
   "scripts": {
-    "start": "node helloworld"
+    "no-publish": "npm config list",
+    "publish-this": "npm publish ",
+    "publish-deep": "npm run no-publish -- --json  & npm run inbetween",
+    "inbetween": "npm run publish-this",
+    "no-publish-deep": "npm run no-publish -- --json"
   },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "auth0": "^2.42.0"
-  },
-  "devDependencies": {
-    "debug": "^4.1.1"
+    "json-schema": "0.2.3"
   }
 }
