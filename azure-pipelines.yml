@@ -1,7 +1,5 @@
 trigger:
  - master
-    pool:
-      name: Default
 steps:
 - task: JFrogNpm@1
   inputs:
