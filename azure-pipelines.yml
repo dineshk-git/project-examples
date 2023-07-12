@@ -1,7 +1,7 @@
 parameters:
   - name: repo_name
     type: string
-    default: dev-local-repo
+    default: dinesh-docker-local1
   - name: this_name
     type: string
   - name: repo_type
@@ -35,8 +35,8 @@ steps:
     artifactoryConnection: 'dineshkp'
     buildName: '$(Build.DefinitionName)'
     buildNumber: $(build_number)
-    targetRepo: 'dev-rel-local-repo'
-    sourceRepo: 'dev-local-repo'
+    targetRepo: 'dinesh-docker-local2'
+    sourceRepo: 'dinesh-docker-local1'
     includeDependencies: true
     copy: true
 
