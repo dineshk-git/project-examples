@@ -1,43 +1,12 @@
-parameters:
-  - name: repo_name
-    type: string
-    default: dinesh-docker-local1
-  - name: this_name
-    type: string
-  - name: repo_type
-    type: string
-  - name: stage_name
-    type: string
-
-steps:
-- task: JFrog.jfrog-azure-devops-extension.jfrog-nuget.JFrogNuGet@1
-  displayName: 'Publishing ${{ parameters.this_name }} nuget package to JFROG'
-  inputs:
-    command: push
-    artifactoryConnection: 'dineshkp'
-    targetDeployRepo: '${{ parameters.repo_name }}'
-    buildName: '$(resources.pipeline.buildResource.pipelineName)'
-    buildNumber: '$(resources.pipeline.buildResource.runID)'
-    pathToNupkg: '$(Pipeline.Workspace)/buildResource/main-$(resources.pipeline.buildResource.runID)/packages/*.nupkg'
-
-- task: JFrog.jfrog-azure-devops-extension.jfrog-publish-build-info.JFrogPublishBuildInfo@1
-  displayName: 'JFrog Publish Build Info'
-  inputs:
-    artifactoryConnection: 'dineshkp'
-    buildName: '$(resources.pipeline.buildResource.pipelineName)'
-    buildNumber: '$(resources.pipeline.buildResource.runID)'
-    excludeEnvVars: '*password*;*psw*;*secret*;*key*;*token*;*auth*;'
-
-
-- task: JFrog.jfrog-azure-devops-extension.jfrog-promote-build-task.JFrogBuildPromotion@1
-  displayName: 'Promoting ${{ parameters.this_name }} nuget package JFrog Build Promotion'
+- task: JFrogBuildPromotion@1
   inputs:
     artifactoryConnection: 'dineshkp'
     buildName: '$(Build.DefinitionName)'
-    buildNumber: $(build_number)
-    targetRepo: 'dinesh-docker-local2'
-    sourceRepo: 'dinesh-docker-local1'
-    includeDependencies: true
+    buildNumber: '$(Build.BuildNumber)'
+    targetRepo: 'dinesh-docker-local1'
+    status: 'Released'
+    comment: 'Promoting release candidate'
+    sourceRepo: 'dinesh-docker-local2'
+    includeDependencies: false
     copy: true
-
- 
+    dryRun: false
