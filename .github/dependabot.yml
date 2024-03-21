@@ -4,10 +4,3 @@ Artifactory:
 url: https://incloudmaster.jfrog.io/artifactory/api/npm/customer-npm-remote/
 type: npm-registry
 token: ${{secrets.JFROG_AUTH_TOKEN}}
-updates:
-- package-ecosystem: "npm"
-directory: "/"
-registries:
-- Artifactory
-schedule:
-interval: "daily"
