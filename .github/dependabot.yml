@@ -1,6 +1,6 @@
 version: 2
 registries:
-Artifactory:
-url: https://incloudmaster.jfrog.io/artifactory/api/npm/customer-npm-remote/
-type: npm-registry
-token: ${{secrets.DINESH}}
+  Artifactory:
+    type: npm-registry
+    url: https://incloudmaster.jfrog.io/artifactory/api/npm/customer-npm-remote/
+    token: ${{secrets.DINESH}}
