@@ -6,7 +6,7 @@ registries:
     token: ${{secrets.SHORTTOKEN}}
 updates:
   - package-ecosystem: "npm"
-    directory: "/"
+    directory: "npm-example/"
     registries:
      - Artifactory
     schedule:
