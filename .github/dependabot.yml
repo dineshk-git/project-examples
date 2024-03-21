@@ -2,7 +2,7 @@ version: 2
 registries:
   Artifactory:
     type: npm-registry
-    url: https://incloudmaster.jfrog.io/artifactory/api/pypi/manu-pypi-local/
+    url: https://incloudmaster.jfrog.io/artifactory/manu-pypi-local/
     token: ${{secrets.DINESH}}
 updates:
   - package-ecosystem: "Pypi"
