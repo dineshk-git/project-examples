@@ -3,7 +3,7 @@ registries:
   Artifactory:
     type: python-index
     url: https://incloudmaster.jfrog.io/artifactory/my-feed/pypi/manu-pypi-local/
-    token: ${{secrets.KUMAR}}
+    token: ${{secrets.SHORTTOKEN}}
 updates:
   - package-ecosystem: "pip"
     directory: "/"
