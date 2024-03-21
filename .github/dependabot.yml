@@ -5,7 +5,7 @@ registries:
     url: https://incloudmaster.jfrog.io/artifactory/manu-pypi-local/
     token: ${{secrets.DINESH}}
 updates:
-  - package-ecosystem: "Pypi"
+  - package-ecosystem: "pypi"
     directory: "/"
     registries:
      - Artifactory
