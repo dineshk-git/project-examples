@@ -5,9 +5,9 @@ registries:
     url: https://incloudmaster.jfrog.io/artifactory/api/npm/customer-npm-remote/
     token: ${{secrets.DINESH}}
 updates:
-  - package-ecosystem: "npm"
+  ##- package-ecosystem: "npm"
   directory: "/"
   registries:
-   - Artifactory
+   ##- Artifactory
   schedule:
     interval: "daily"
