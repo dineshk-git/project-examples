@@ -2,7 +2,7 @@ version: 2
 registries:
   Artifactory:
     type: npm-registry
-    url: https://incloudmaster.jfrog.io/artifactory/api/npm/customer-npm-remote/
+    url: https://incloudmaster.jfrog.io/artifactory/api/npm/customer-npm-local/
     token: ${{secrets.DINESH}}
 updates:
   - package-ecosystem: "npm"
