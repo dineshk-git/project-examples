@@ -1,18 +1,7 @@
-
-
-dependabot-test/.github/ dependabot.yml
-in main
-Preview
-# To get started with Dependabot version updates, you'll need to specify which
-Spaces
-# package ecosystems to update and where the package manifests are located.
-# Please see the documentation for all configuration options:
-# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
-
 version: 2
 registries:
 Artifactory:
-url: https://incloudmaster.io/artifactory/api/npm/npm-remote/
+url: https://incloudmaster.jfrog.io/artifactory/api/npm/customer-npm-remote/
 type: npm-registry
 token: ${{secrets.JFROG_AUTH_TOKEN}}
 updates:
