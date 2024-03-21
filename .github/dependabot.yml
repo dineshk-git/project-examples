@@ -3,7 +3,7 @@ registries:
   Artifactory:
     type: npm-registry
     url: https://incloudmaster.jfrog.io/artifactory/api/npm/customer-npm-remote/
-    token: ${{secrets.SHORTTOKEN}}
+    token: ${{secrets.SHORTTOKEN_KUMAR}}
 updates:
   - package-ecosystem: "npm"
     directory: "npm-example/"
