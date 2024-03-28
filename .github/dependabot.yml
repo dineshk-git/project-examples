@@ -6,7 +6,7 @@ registries:
     token: ${{secrets.SHORTTOKEN_KUMAR}}
 updates:
   - package-ecosystem: "pip"
-    directory: "python-example/"
+    directory: "python-example/pip-example/"
     registries:
      - Artifactory
     schedule:
