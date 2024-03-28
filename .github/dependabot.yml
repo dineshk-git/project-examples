@@ -5,7 +5,7 @@ registries:
     url: https://incloudmaster.jfrog.io/artifactory/api/pypi/customer-pypi-remote/
     token: ${{secrets.SHORTTOKEN_KUMAR}}
 updates:
-  - package-ecosystem: "pypi"
+  - package-ecosystem: "pip"
     directory: "pypi-example/"
     registries:
      - Artifactory
