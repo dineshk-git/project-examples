@@ -1,12 +1,12 @@
 version: 2
 registries:
   Artifactory:
-    type: npm-registry
-    url: https://incloudmaster.jfrog.io/artifactory/api/npm/customer-npm-remote/
+    type: python-index
+    url: https://incloudmaster.jfrog.io/artifactory/api/pypi/customer-pypi-remote/
     token: ${{secrets.SHORTTOKEN_KUMAR}}
 updates:
-  - package-ecosystem: "npm"
-    directory: "npm-example/"
+  - package-ecosystem: "pypi"
+    directory: "pypi-example/"
     registries:
      - Artifactory
     schedule:
