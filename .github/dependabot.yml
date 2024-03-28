@@ -2,7 +2,7 @@ version: 2
 registries:
   Artifactory:
     type: python-index
-    url: https://incloudmaster.jfrog.io/artifactory/api/pypi/customer-pypi-remote/
+    url: https://incloudmaster.jfrog.io/artifactory/customer-pypi-remote/
     token: ${{secrets.SHORTTOKEN_KUMAR}}
 updates:
   - package-ecosystem: "pip"
