@@ -7,6 +7,7 @@ registries:
 updates:
   - package-ecosystem: "pip"
     directory: "python-example/"
+    insecure-external-code-execution: allow
     registries:
      - Artifactory
     schedule:
