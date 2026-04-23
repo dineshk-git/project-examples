@@ -1,2 +1,2 @@
-PyYAML>3.11
+PyYAML>=6.0.3
 nltk
